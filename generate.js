@@ -2,7 +2,7 @@ module.exports = function(){
     var faker = require("faker");
     var _ =require("lodash");
     return {
-        people: _.times(3000, function(n){
+        people: _.times(30000, function(n){
             return {
                 id:n,
                 name: faker.name.findName(),
