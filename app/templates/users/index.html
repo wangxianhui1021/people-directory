@@ -3,28 +3,39 @@
 <a class="btn btn-default" href="#/users/new">New Employee</a>
 
 <div class="form-group">
-    Search:<input type="text" ng-model="search.input.$" />
+    Search:<input type="text" ng-model="search_input" />
 </div>
             <table class="table table-hover">
                 <thead>
                 <tr>
-                    <th>Photo</th>
+
                     <th>Name</th>
                     <th>Job Title</th>
+                    <th>Location</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
 
                 </tr>
                 </thead>
                 <tbody>
 
-                <tr ng-repeat="user in users | filter:search.input">
-                    <td>
-                        <a ng-href="#/users/{{user.id}}"><img ng-src="{{user.avatar}}" /></a>
-                    </td>
-                    <td>
+                <tr ng-repeat="user in users | filter:search_input | startFrom:currentPage*pageSize | limitTo:pageSize" >
+
+
+                <td>
                         <a ng-href="#/users/{{user.id}}">{{user.name}}</a>
                     </td>
                     <td>
                         {{user.job_title}}
+                    </td>
+                    <td>
+                        {{user.location}}
+                    </td>
+                    <td>
+                        {{user.email}}
+                    </td>
+                    <td>
+                        {{user.phone}}
                     </td>
 
                 </tr>
@@ -36,6 +47,10 @@
 
 
         </table>
+
+<button class="btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><<</button>
+<button class="btn" ng-disabled="(currentPage+1) == numberOfPages()" ng-click="currentPage=currentPage+1">>></button>
+Page {{currentPage+1}} of {{numberOfPages()}}
 
 
 
