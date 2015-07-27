@@ -1,2 +1,17 @@
 /* app css stylesheet */
 
+.center {
+    padding: 30px;
+    text-align: center;
+
+}
+
+.inner .center {
+    margin: 0 auto;
+    width: 400px;
+
+}
+
+.main-btns {
+    margin: 10px auto;
+}
