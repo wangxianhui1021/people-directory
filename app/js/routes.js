@@ -4,7 +4,8 @@ angular.module('myApp').config(function($routeProvider){
          redirectTo: '/home'
      })
      .when('/home',{
-         templateUrl: 'templates/home.html'
+         templateUrl: 'templates/home.html',
+         controller: "homeController"
 
      })
      .when('/employee',{

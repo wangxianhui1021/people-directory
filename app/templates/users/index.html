@@ -1,5 +1,5 @@
 <div class="page-header">
-<h1>users index</h1>
+<h1>Employee index</h1>
 <div class="new-employee-button">
     <a class="btn btn-primary " href="#/users/new">New Employee</a>
 </div>
@@ -52,10 +52,12 @@
 
 
         </table>
+<div class="pagination">
 
 <button class="btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><<</button>
 <button class="btn" ng-disabled="(currentPage+1) == numberOfPages()" ng-click="currentPage=currentPage+1">>></button>
 Page {{currentPage+1}} of {{numberOfPages()}}
+</div>
 
 
 
