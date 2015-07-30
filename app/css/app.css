@@ -1,13 +1,14 @@
 /* app css stylesheet */
 
 .center {
-    padding: 30px;
+    padding: 6em 0;
     text-align: center;
 
 }
 
 .inner .center {
-    margin: 0 auto;
+    margin: 5em auto;
+
 
 
 
@@ -28,10 +29,20 @@
 
 }
 
-.edit-delete {
+.edit-delete{
     float:right;
     margin: 1em 20em 0 0;
 
+}
+
+.save {
+    float: right;
+    margin: 1.5em 0 2em 0;
+}
+
+.photo{
+    width:200px;
+    height: 200px;
 }
 
 /*font awsome font style */
@@ -45,8 +56,41 @@
 /* login page style*/
 .login-box {
     width: 40%;
-    margin: 5em auto;
+    margin: 3em auto;
 }
+
+/*new and edit page form styles*/
+.form-box {
+    width: 80%;
+    margin: 3em auto 5em auto;
+}
+
+/*home page buttons styles */
+
+.employee {
+    display: inline;
+    border: 2px solid navy;
+    padding: 12em 12em;
+    margin: 5em 5em 4em 0;
+    background-image: url("images/employee.jpg");
+}
+
+.hr {
+    display: inline;
+    border: 2px solid navy;
+    width: 50em;
+    height: 50em;
+    padding: 12em 12em;
+    margin: 5em 5em 4em 0;
+    background-image: url("images/hr.jpg");
+
+}
+.btn-hr, .btn-employee {
+    margin: 8em auto -2em auto;
+
+}
+
+
 /* search box style */
 
 .searchform {
